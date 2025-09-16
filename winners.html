@@ -1,0 +1,293 @@
+<body>
+
+
+    <div id="container">
+        <div id="headerArea">
+            <div id="header" style="height: 209px;"></div>
+            <nav id="navbar" style="margin-bottom: 10px;">
+                <ul>
+                    <li><a href="layouttest">Home</a></li>
+                    <li><a href="winners">Winners</a></li>
+                    <li><a href="archive">Archive</a></li>
+                    <li><a href="staff">Staff Intro</a></li>
+                    <li><a href="highlights">Highlights</a></li>
+                    <li><a href="shop">S̶h̶o̶p̶</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+
+            <main>
+
+                <h1><a href="https://docs.google.com/forms/d/e/1FAIpQLSfLjJ846BBi5L63x0N9XNPkxm3ZI5LxEU6b_WbtmbnqSMf0hQ/viewform"
+                        target="_blank">The Submission Form!</a></h1>
+                <p><strong>Current Contest: Culture Couture</strong></p>
+                <h3>We have not finished our first contest, so we dont have any contest winners yet!</h3>
+                <p style="color: #FEFAE0;">Wait until September 30th!</p>
+
+
+            </main>
+
+            <aside id="rightSidebar" style="margin-left: 10px;">
+                <h2>Updates</h2>
+                <div class="box">
+                    <p style="color: #E9E4DC">Added home page.</p>
+                    <ul style="padding-left:10px; color: #E9E4DC">
+                        <li>Added all the pages</li>
+                        <li>Finalized design of website</li>
+                        <li>Ensured everybody reading this to buy YAWP vol.7</li>
+                    </ul>
+                </div>
+                <h2>Thats All!</h2>
+            </aside>
+        </div>
+        <footer id="footer" style="margin-top: 10px; color: #FEFAE0;" style="color: #FEFAE0;">Yawp Lit Mag Vol. 7
+            2025-2026 "The megaphone for creators"</footer>
+    </div>
+    <!-- THIS IS THE CSS !-->
+    <style>
+        /* user styles */
+
+        /* styles are what change the color and sizes of stuff on your site. */
+
+        /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+        :root {
+            --header-image: url(mit\ mag\ banner\ website2.png);
+
+            /* colors */
+            --content: #43256E;
+        }
+
+        /* if you have the URL of a font, you can set it below */
+        /* feel free to delete this if it's not your vibe */
+
+        /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            background-color: #606c38;
+            background-size: 65px;
+            color: #fceaff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* below this line is CSS for the layout */
+
+        /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+        /* the "container" is what wraps your entire website */
+        /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+        #container {
+            max-width: 900px;
+            /* this is the width of your layout! */
+            /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+            margin: 0 auto;
+            /* this centers the entire page */
+        }
+
+        /* the area below is for all links on your page
+    EXCEPT for the navigation */
+        #container a {
+            color: #BCA890;
+            font-weight: bold;
+            /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+        }
+
+        #header {
+            width: 100%;
+            background-color: #5e4e8c;
+            /* header color here! */
+            height: 150px;
+            /* this is only for a background image! */
+            /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+            background-image: var(--header-image);
+            background-size: 100%;
+        }
+
+        /* navigation section!! */
+        #navbar {
+            height: 40px;
+            background-color: #283618;
+            /* navbar color */
+            width: 100%;
+        }
+
+        #navbar ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            justify-content: space-evenly;
+        }
+
+        #navbar li {
+            padding-top: 10px;
+        }
+
+        /* navigation links*/
+        #navbar li a {
+            color: #BCA890;
+            /* navbar text color */
+            font-weight: 800;
+            text-decoration: none;
+            /* this removes the underline */
+        }
+
+        /* navigation link when a link is hovered over */
+        #navbar li a:hover {
+            color: #E9E4DC;
+            text-decoration: underline;
+        }
+
+        #flex {
+            display: flex;
+        }
+
+        /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+        aside {
+            background-color: #283618;
+            width: 200px;
+            padding: 20px;
+            font-size: smaller;
+            /* this makes the sidebar text slightly smaller */
+        }
+
+
+        /* this is the color of the main content area,
+    between the sidebars! */
+        main {
+            background-color: #283618;
+            flex: 1;
+            padding: 20px;
+            order: 2;
+        }
+
+        /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+        */ #leftSidebar {
+            order: 1;
+        }
+
+        #rightSidebar {
+            order: 3;
+        }
+
+        footer {
+            background-color: #283618;
+            /* background color for footer */
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            /* this centers the footer text */
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #c3a87f;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        strong {
+            /* this styles bold text */
+            color: #c3a87f;
+        }
+
+        /* this is just a cool box, it's the darker colored one */
+        .box {
+            background-color: #2b2414;
+            border: 1px solid #FEFAE0;
+            padding: 10px;
+        }
+
+        /* CSS for extras */
+
+        #topBar {
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            font-size: smaller;
+            background-color: #13092D;
+        }
+
+
+        /* BELOW THIS POINT IS MEDIA QUERY */
+
+        /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+        @media only screen and (max-width: 800px) {
+            #flex {
+                flex-wrap: wrap;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+            main {
+                order: 1;
+            }
+
+            #leftSidebar {
+                order: 2;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            #navbar ul {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
+
+</body>
